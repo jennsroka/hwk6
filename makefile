@@ -11,10 +11,5 @@ game.o: game.cc game.h
 	g++ -c game.cc
 othello.o: othello.cc othello.h
 	g++ -c othello.cc
-archive: archive.tgz
-archive.tgz: makefile game.cc colors.h game.h othello.h piece.h main.cc othello.cc main.o game.o othello.o
-	cd /home/ecaggian/cs3560_hw/hw5
-	tar cvf archive.tar *
-	gzip archive.tar
 clean:
 	-rm *.o
