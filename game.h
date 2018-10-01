@@ -5,6 +5,13 @@
 #include <queue> // Provides queue<string>
 #include <string> // Provides string
 
+/** The game.h file is the header file for the game.cc
+ file which implements all functions that are in the game.h file
+ besides the ones that have already been defined within the game.h file.
+ The functions listed, within this file, allow us to the game to be played in whole
+ while the board is also being displayed within the user's terminal. All files that are defined here also have their documentation here. All files that are defined in the game.cc file will be further documented in the game.cc file.
+ */
+
 namespace main_savitch_14
 {
 	class game
@@ -14,15 +21,20 @@ namespace main_savitch_14
 		enum who {HUMAN, NEUTRAL, COMPUTER}; // Possible game outcomes
 
 		// CONSTRUCTOR and DESTRUCTOR
+        /** The game constructor for this game, game(), allows the game
+         to restart and have a set move_number as 0. This makes the board start at its original positions and have no moves already made for both the white and black pieces.
+         */
 		game() {move_number = 0;}
-		virtual ~game() {}
+        virtual ~game() {}
 
 		// PUBLIC MEMBER FUNCTIONS
 		// The play function should not be overridden. IT plays one game, 
 		// with the human player moving first and the computer second. 
 		// The computer uses an alpha-beta look ahead algorithm to select its 
 		// moves. The return value is the winner of the game (or NEUTRAL for
-		// a tie). 
+		// a tie).
+        /** The play function allows the game to be played one time. It starts with the human player going first and the computer second. This function is further defined within the game.cc file.
+         */
 		who play(); 
 
 		protected:
@@ -30,19 +42,30 @@ namespace main_savitch_14
 		// OPTIONAL VIRTUAL FUNCTIONS (overriding these is optional)
 		//************************************************
 		virtual void display_message(const std::string& message) const; 
-		virtual std::string get_user_move() const; 
+		virtual std::string get_user_move() const;
+        /** The last_mover function calculates which player made the last move.
+         If it returns HUMAN, then the COMPUTER will make the next move. However, if the COMPUTER is returned then the HUMAN will make the next move.
+         */
 		virtual who last_mover() const
 		{
 			return (move_number % 2 == 1? HUMAN : COMPUTER);
 		}
+        /** the moves_completed functions allows the game to calculate how many
+         moves have been made during the game. This returns an integer that holds the value of the number of moves that have been made.
+         */
 		virtual int moves_completed () const 
 		{
 			return move_number;
 		}
+        /** The next_mover function allows the computer to calculate who the next player in the game is. This does the opposite of last_mover function. If it returns the COMPUTER then the computer player will make the next move. However, if it returns HUMAN than the human will make the next move.
+         */
 		virtual who next_mover() const
 		{
 			return (move_number % 2 == 0 ? COMPUTER : HUMAN);
 		}
+        /** The opposite function takes in a who player function and tests to see if they
+         are the opposite person than the player. If the player is COMPUTER than the HUMAN would be returned, if the player is HUMAN than the COMPUTER would be returned.
+         */
 		virtual who opposite(who player) const
 		{
 			return (player == HUMAN) ? COMPUTER : HUMAN;
