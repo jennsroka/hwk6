@@ -24,7 +24,7 @@ namespace main_savitch_14
  @return HUMAN is a game::who variable that will allow the game to start with the HUMAN player as the first move.
  
  There are no parameters with this function.
- */
+ **/
     
 game::who game::play( )
 // The play function should not be overridden. It plays one round of the
@@ -59,7 +59,7 @@ game::who game::play( )
  @param message is a string reference that will be displayed by this function.
  
  There are no returns within this function.
- */
+ **/
 void game::display_message(const string& message) const
 {
 	cout << message;
@@ -73,7 +73,7 @@ void game::display_message(const string& message) const
  There are no parameters in this function.
  
  @return answer is a string that tells the user inputs to see if they are able to move or not.
- */
+ **/
 string game::get_user_move( ) const
 {
 	string answer;
@@ -90,7 +90,7 @@ string game::get_user_move( ) const
  
  There are no parameters with this function.
  @return game::who is a variable that depends on who the value of the evaluate function. This tests to see who the winner is at the current moment based off of the pieces that each player currently has in their possession.
- */
+ **/
 game::who game::winning()const {
 
 	int value = evaluate();
@@ -116,7 +116,7 @@ game::who game::winning()const {
  @param beat_this is the value of another move that the player is considering.
  
  @return evaluate will return a large number if the position is a good move for the player.
- */
+ **/
 int game::eval_with_lookahead(int look_ahead, int beat_this)
 // Evaluate a board position with lookahead.
 // --int look_aheads:  How deep the lookahead should go to evaluate the move.
@@ -172,7 +172,7 @@ int game::eval_with_lookahead(int look_ahead, int beat_this)
  will play as if they are trying to beat you.
  
  There are no parameters or return values for this function.
- */
+ **/
 void game::make_computer_move( )
 {
 	queue<string> moves;
@@ -213,7 +213,7 @@ void game::make_computer_move( )
  which will then actually change the colors of the pieces on the board according to the move.
  
  There are no parameters or return values for this function.
- */
+ **/
 void game::make_human_move( ) {
 	string move;
 

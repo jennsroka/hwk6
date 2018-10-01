@@ -34,7 +34,8 @@ in the terminal while the game is being played.
  There are no functions or parameters in this file. 
  
  All credit for this file is given to Matthew Beldyk.
- */
+ **/
+
 #ifndef COLORS_H
 #define COLORS_H
 

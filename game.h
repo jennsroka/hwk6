@@ -10,7 +10,7 @@
  besides the ones that have already been defined within the game.h file.
  The functions listed, within this file, allow us to the game to be played in whole
  while the board is also being displayed within the user's terminal. All files that are defined here also have their documentation here. All files that are defined in the game.cc file will be further documented in the game.cc file.
- */
+ **/
 
 namespace main_savitch_14
 {
@@ -23,7 +23,7 @@ namespace main_savitch_14
 		// CONSTRUCTOR and DESTRUCTOR
         /** The game constructor for this game, game(), allows the game
          to restart and have a set move_number as 0. This makes the board start at its original positions and have no moves already made for both the white and black pieces.
-         */
+         **/
 		game() {move_number = 0;}
         virtual ~game() {}
 
@@ -34,7 +34,7 @@ namespace main_savitch_14
 		// moves. The return value is the winner of the game (or NEUTRAL for
 		// a tie).
         /** The play function allows the game to be played one time. It starts with the human player going first and the computer second. This function is further defined within the game.cc file.
-         */
+         **/
 		who play(); 
 
 		protected:
@@ -48,20 +48,20 @@ namespace main_savitch_14
          
          There are no parameters with this function.
          @return (move_number % 2) == 1? HUMAN : COMPUTER) will return the virtual enum value based off of who played last
-         */
+         **/
 		virtual who last_mover() const
 		{
 			return (move_number % 2 == 1? HUMAN : COMPUTER);
 		}
         /** the moves_completed functions allows the game to calculate how many
          moves have been made during the game. This returns an integer that holds the value of the number of moves that have been made.
-         */
+         **/
 		virtual int moves_completed () const 
 		{
 			return move_number;
 		}
         /** The next_mover function allows the computer to calculate who the next player in the game is. This does the opposite of last_mover function. If it returns the COMPUTER then the computer player will make the next move. However, if it returns HUMAN than the human will make the next move.
-         */
+         **/
 		virtual who next_mover() const
 		{
 			return (move_number % 2 == 0 ? COMPUTER : HUMAN);
@@ -71,7 +71,7 @@ namespace main_savitch_14
          
          @param player is the enum value of who is the current player.
          @return (player == HUMAN) ? COMPUTER : HUMAN - will return the player who is opposite the parameter
-         */
+         **/
 		virtual who opposite(who player) const
 		{
 			return (player == HUMAN) ? COMPUTER : HUMAN;
