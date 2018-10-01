@@ -3,6 +3,9 @@
 // November 23, 2015
 // Project7
 
+/**This file contains the functions for the Othello class. These functions are defined in the othello.cc 
+class**/
+
 #ifndef OTHELLO_H
 #define OTHELLO_H
 #include "game.h"
