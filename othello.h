@@ -3,6 +3,9 @@
 // November 23, 2015
 // Project7
 
+/**This file contains the functions for the Othello class. These functions are defined in the othello.cc 
+class**/
+
 #ifndef OTHELLO_H
 #define OTHELLO_H
 #include "game.h"
@@ -23,6 +26,8 @@ public:
 	int evaluate()const;
 	bool is_game_over()const;
 	bool is_legal(const string& move)const;
+	/**This function makes the move from the space that was input by the user. @param move is a constant string variable 
+	that was input by the user. @return is void, so there is no return
 	void make_move(const string& move);
 	void restart();
 	void make_skips();

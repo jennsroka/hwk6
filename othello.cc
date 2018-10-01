@@ -216,7 +216,8 @@ void Othello::restart() {
 
 /**This function checks to make sure that the move input by the player is legal. It checks if the board space is empty,
 and also if the surrounding pieces are black or white. Based on these parameter, it returns a bool true or false
-to determine if the move is legal or illegal.**/
+to determine if the move is legal or illegal. @param move is a constant string variable input by the user
+@return is true or false depending on if the move is allowed or not**/
 
 bool Othello::is_legal(const string& move)const {
 
