@@ -20,6 +20,10 @@ namespace main_savitch_14
 /**The play function plays one round of the game. The human player moves first
  with the computer moving second. This function returns the value of the winner of the game.
  If there is a tie, it will return neutral.
+ 
+ @return HUMAN is a game::who variable that will allow the game to start with the HUMAN player as the first move.
+ 
+ There are no parameters with this function.
  */
     
 game::who game::play( )
@@ -52,6 +56,9 @@ game::who game::play( )
 
 /** The display_message function displays the supplied message to the screen
   during play.
+ @param message is a string reference that will be displayed by this function.
+ 
+ There are no returns within this function.
  */
 void game::display_message(const string& message) const
 {
@@ -62,6 +69,10 @@ void game::display_message(const string& message) const
  If the move is legal, then it will accept your answer, if that move is not permitted
  then the function will invoke the display_message function to inform you that your move is illegal.
  it will then return your answer.
+ 
+ There are no parameters in this function.
+ 
+ @return answer is a string that tells the user inputs to see if they are able to move or not.
  */
 string game::get_user_move( ) const
 {
@@ -76,6 +87,9 @@ string game::get_user_move( ) const
 /** The winning function evaluates how many pieces each player has
  on the board at the current moment. It then returns HUMAN, COMPUTER,
  or NEUTRAL if it is a tie. This function is invoked at the end of the game.
+ 
+ There are no parameters with this function.
+ @return game::who is a variable that depends on who the value of the evaluate function. This tests to see who the winner is at the current moment based off of the pieces that each player currently has in their possession.
  */
 game::who game::winning()const {
 
@@ -96,7 +110,12 @@ game::who game::winning()const {
 
 /** The eval_with_lookahead functions allows you to evaluate the board position
  with lookahead. It will allow you to see what the possible opponent moves are and
- tells you the best possible move is based on the current board situation,
+ tells you the best possible move is based on the current board situation.
+ 
+ @param look_ahead is the current position of the board when this function is run.
+ @param beat_this is the value of another move that the player is considering.
+ 
+ @return evaluate will return a large number if the position is a good move for the player.
  */
 int game::eval_with_lookahead(int look_ahead, int beat_this)
 // Evaluate a board position with lookahead.
@@ -151,6 +170,8 @@ int game::eval_with_lookahead(int look_ahead, int beat_this)
  both players are human. This allows the game to become more of an AI format,
  as then it will calculate the best possible moves the computer can make and
  will play as if they are trying to beat you.
+ 
+ There are no parameters or return values for this function.
  */
 void game::make_computer_move( )
 {
@@ -190,6 +211,8 @@ void game::make_computer_move( )
  legal, then the function will invoke the display_message function to display a message that says
  "Illegal move". If the move is considered legal, it will then be sent to the make_move function
  which will then actually change the colors of the pieces on the board according to the move.
+ 
+ There are no parameters or return values for this function.
  */
 void game::make_human_move( ) {
 	string move;

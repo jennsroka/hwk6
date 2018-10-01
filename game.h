@@ -45,6 +45,9 @@ namespace main_savitch_14
 		virtual std::string get_user_move() const;
         /** The last_mover function calculates which player made the last move.
          If it returns HUMAN, then the COMPUTER will make the next move. However, if the COMPUTER is returned then the HUMAN will make the next move.
+         
+         There are no parameters with this function.
+         @return (move_number % 2) == 1? HUMAN : COMPUTER) will return the virtual enum value based off of who played last
          */
 		virtual who last_mover() const
 		{
@@ -65,6 +68,9 @@ namespace main_savitch_14
 		}
         /** The opposite function takes in a who player function and tests to see if they
          are the opposite person than the player. If the player is COMPUTER than the HUMAN would be returned, if the player is HUMAN than the COMPUTER would be returned.
+         
+         @param player is the enum value of who is the current player.
+         @return (player == HUMAN) ? COMPUTER : HUMAN - will return the player who is opposite the parameter
          */
 		virtual who opposite(who player) const
 		{

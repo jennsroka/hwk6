@@ -31,6 +31,8 @@ in the terminal while the game is being played.
  file by the creater, you can use it with cout statements and throughout
  the rest of the code.
  
+ There are no functions or parameters in this file. 
+ 
  All credit for this file is given to Matthew Beldyk.
  */
 #ifndef COLORS_H
