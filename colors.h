@@ -24,16 +24,8 @@
 //
 //***********************************************************
 
-/** The colors.h file allows the game to change colors of the text
-in the terminal while the game is being played.
- There are no functions within this file, there are only color declarations
- for each color. As described in the comments at the beginning of the
- file by the creater, you can use it with cout statements and throughout
- the rest of the code.
- 
- There are no functions or parameters in this file. 
- 
- All credit for this file is given to Matthew Beldyk.
+/** @file
+    The colors.h file allows the game to change colors of the text in the terminal while the game is being played. There are no functions within this file, there are only color declarations for each color. As described in the comments at the beginning of the file by the creater, you can use it with cout statements and throughout the rest of the code. There are no functions or parameters in this file. All credit for this file is given to Matthew Beldyk.
  **/
 
 #ifndef COLORS_H

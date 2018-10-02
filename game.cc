@@ -16,8 +16,12 @@ namespace main_savitch_14
 
 //*************************************************************************
 // PUBLIC MEMBER FUNCTIONS
-
-/**The play function plays one round of the game. The human player moves first
+/** @file
+ The game.cc file invokes all of the functions from the game.h file.
+ **/
+    
+/**
+ The play function plays one round of the game. The human player moves first
  with the computer moving second. This function returns the value of the winner of the game.
  If there is a tie, it will return neutral.
  

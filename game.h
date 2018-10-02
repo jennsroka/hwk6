@@ -5,7 +5,8 @@
 #include <queue> // Provides queue<string>
 #include <string> // Provides string
 
-/** The game.h file is the header file for the game.cc
+/** @file
+ The game.h file is the header file for the game.cc
  file which implements all functions that are in the game.h file
  besides the ones that have already been defined within the game.h file.
  The functions listed, within this file, allow us to the game to be played in whole

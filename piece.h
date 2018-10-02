@@ -3,7 +3,8 @@
 // November 23, 2015
 // Project7
 
-/** The piece.h file creates a piece object that starts with no color. Once the piece is assigned a color it will remain black or white until the flip function is invoked by the game and othello classes. There is no further declarations of this file besides what is below.
+/** @file
+ The piece.h file creates a piece object that starts with no color. Once the piece is assigned a color it will remain black or white until the flip function is invoked by the game and othello classes. There is no further declarations of this file besides what is below.
  **/
 
 #ifndef PIECE_H
