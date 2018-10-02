@@ -13,3 +13,5 @@ othello.o: othello.cc othello.h
 clean:
 	-rm *.o
 	-rm game
+	-rm -rf html
+	-rm -rf latex
